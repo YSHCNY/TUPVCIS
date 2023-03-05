@@ -1,0 +1,594 @@
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    font-size: .9rem;
+}
+.thbg{
+    background: #000000;
+}
+
+.sy{    
+    color: rgba(95, 21, 21, 0.397);
+    cursor: default;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    line-height: 1.2em;
+    color: #999;
+}
+
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 5px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.849);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+
+.sbtn{
+    padding: 10px;
+
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #c51a3a;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    transition: 0.5s;
+    border: 2px solid #c51a3a;
+    
+}
+
+.sbtn:hover{
+    background-color: #fff;
+    transition: .4s;
+    letter-spacing: 6px;
+    color: #c51a3a;
+    border: 2px solid #c51a3a;
+    text-decoration: none;
+}
+
+.sbtn:focus{
+    outline: none;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #c51a3a;
+    color: #fff;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.849);
+}
+
+#sidebar.active {
+    margin-left: -250px;
+ 
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #c51a3a;
+    
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+  
+    padding: 10px;
+    font-size: 1em;
+    display: block;
+}
+
+.mainlist{
+    margin-top: 10px;
+}
+
+#sidebar ul li a:hover {
+    color: #c51a3a;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #c51a3a;
+    background: #fff;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #750f22;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.ppu img{
+    border: 1px solid black;
+    border-radius: 100%;
+}
+.btnTogSN:hover{
+    background-color: #c51a3a;
+    border-radius: 3px;
+    color: #fff;
+    border: 1px solid #c51a3a;
+}
+
+.btnTogSN{
+    background-color: #fff;
+    color: #c51a3a;
+    border: 1px solid #c51a3a;
+    transition: .4s ease-out;
+}
+
+.SBtitle{
+    color: black;
+}
+
+.NAVbtn{
+    background-color: #c51a3a;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: .4s ease-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.849);
+}
+
+.NAVbtn:hover{
+    background-color: #fff;
+    color: #c51a3a;
+    border: 1px solid #c51a3a;
+}
+
+.btnset{
+    color: #fff;
+    background-color: #c51a3a;
+    border: 1px solid #c51a3a;
+    transition: .3s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.849);
+}
+
+
+.btnset:hover{
+    color: #c51a3a;
+    background-color: #fff;
+    border: 1px solid #c51a3a;
+    transition: .3s;
+}
+
+
+
+    
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+.btnedit,
+.btndelete{
+    font-size: medium;
+    margin: 3px;
+    padding-top: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+
+}
+
+.btnedit{
+    background-color: green;
+    color: #fff;
+}
+
+.btndelete{
+    background-color: #c51a3a;
+    color: #fff;
+}
+
+.btAN{
+    background-color: #fff;
+    color: #c51a3a;
+    transition: .3s;
+    border: 2px solid #c51a3a;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.849);
+}
+
+.btAN:hover{
+    background-color: #c51a3a;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+
+.fcstyle input{
+    border-radius: 10px;
+    margin: 2px;
+    border: 1px solid #000000;
+    transition: .6s;
+    color: black;
+    
+}
+
+.fcstyle input:hover{
+    border: 1px solid #c51a3a;
+    background: #fff;
+   
+}
+
+.fcstyle select{
+    border-radius: 10px;
+    margin: 2px;
+    border: 1px solid #000000;
+    transition: .6s;
+    color: black;
+}
+
+.fcstyle select:hover{
+    border: 1px solid #c51a3a;
+    background: #fff;
+    
+}
+
+
+.fcstyle .form-control:focus{
+    border-color: #c51a3a;
+    color: #c51a3a;
+
+}
+.fcstyle .form-select:focus{
+    border-color: #c51a3a;
+    color: #c51a3a;
+}
+
+.modal-header{
+    background: #c51a3a;
+    color: #fff;
+}
+
+
+.modal-header-edit{
+    background: #3cc51a;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* ================================= EDIT PAGE CSS========================================== */
+
+.editform input{
+    border-radius: 30px;
+    transition: .6s;
+    border: 2px solid #000000;
+}
+
+
+.editform input:hover{
+    border: 2px solid #18c912;
+    background: #fff;
+   
+}
+
+.editform input{
+    border-radius: 30px;
+    border: 2px solid #000000;
+    transition: .6s;
+    color: black;
+    
+}
+
+
+.editform select{
+    border-radius: 30px;
+    border: 2px solid #000000;
+    transition: .6s;
+    color: black;
+}
+
+.editform .form-control:focus{
+    border-color: #18c912;
+    color: #18c912;
+
+}
+.editform .form-select:focus{
+    border-color: #18c912;
+    color: #18c912;
+}
+
+
+
+/* ================================= EDIT PAGE END CSS========================================== */
+
+.thbg .yymmdd{
+    font-size: 3px;
+}
+
+/* =====================================    MED LIST =============================== */
+.medHeadmod{
+    background-color: #146194;
+    color: #fff;
+}
+
+.btANnm{
+    background-color: #fff;
+    color: #146194;
+    transition: .3s;
+    border: 2px solid #146194;
+}
+
+.btANnm:hover{
+    background-color: #146194;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* =================== MED LIST EDIT =================================================*/
+.medadd input{
+    border-radius: 30px;
+    transition: .6s;
+    border: 1px solid #000000;
+}
+
+
+.medadd input:hover{
+    border: 1px solid #146194;
+    background: #fff;
+   
+}
+
+.medadd input{
+    border-radius: 30px;
+    border: 1px solid #000000;
+    transition: .6s;
+    color: black;
+    
+}
+
+
+.medadd select{
+    border-radius: 30px;
+    border: 1px solid #000000;
+    transition: .6s;
+    color: black;
+}
+
+.medadd .form-control:focus{
+    border-color: #146194;
+    color: #146194;
+
+}
+.medadd .form-select:focus{
+    border-color: #146194;
+    color: #146194;
+}
+
+  /* ========================= dashboard ========================= */
+
+  .btnDB {
+    color: #fff;
+    background-color: #c51a3a;
+}
+
+.cardcss{
+    background-color: #c51a3a ;
+    color: #fff;
+    transition: .2s ease-in-out;
+    border: 1px solid #c51a3a;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.849);
+}
+
+.cardcss:hover{
+    background-color: #fff ;
+    color: #c51a3a;
+    border: 1px solid #c51a3a;
+}
+
+
+
+
+
+
+
+
+
+
+  /* ======================== dashboard ========================== */
+
+
+/* ===================== MED LIST EDIT END ============================================= */
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    body{
+        font-size: 1em;
+        
+    }
+
+
+    #sidebar {
+        margin-left: -250px;
+       
+    }
+    #sidebar.active {
+       margin-left: 0;
+       z-index: 999;
+       position: absolute;
+    }
+
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+
+
+
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+ 
+    top: 0;
+    right: 0;
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DATA TABLE */
+@media only screen and (max-width:800px) {
+    #nmt tbody,
+    #nmt tr,
+    #nmt td {
+        display: block;
+    }
+    #nmt thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    #nmt td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+    #nmt td:before {
+        content: attr(data-title);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+    }
+    #nmt tr {
+        border-top: 3px solid #c51a3a;
+        
+    }
+}
